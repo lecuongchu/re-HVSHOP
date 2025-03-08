@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sixtyfour&display=swap");
+
+
+body {
+    font-family: "Montserrat", serif;
+    background: #f8f8f8;
+    padding: 20px;
+}
+
+/* Updated Header */
+header {
+    text-align: right;
+    padding: 20px;
+    background: #ffffff;
+    font-size: 22px; /* Increased header font size */
+    font-weight: bold;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    padding-right: 20px;
+}
+
+/* Increased spacing between items */
+.product-container {
+    display: flex;
+    gap: 50px; /* Increased the gap between image & product details */
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.product-images img {
+    max-width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.product-details {
+    flex: 2;
+}
+
+h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.discount {
+    color: white;
+    background: #2195f5;
+    display: inline-block;
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 20px;
+    margin-top: 10px; /* Added space between prices */
+}
+
+.new-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2195f5;
+    margin-top: 10px;
+}
+
+.status {
+    color: green;
+    font-weight: bold;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.offers {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+.offers h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.offers ul {
+    list-style: none;
+}
+
+.offers ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-code,
+.category {
+    font-size: 16px;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-images, .product-details {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        padding-right: 10px;
+    }
+
+    .product-container {
+        padding: 20px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .discount {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .old-price, .new-price {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}

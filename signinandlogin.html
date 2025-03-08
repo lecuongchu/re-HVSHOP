@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden-form {
+            display: none;
+        }
+
+        /* Hiển thị nội dung theo hash trên URL */
+        #login-form:target,
+        #signup-form:target {
+            display: block;
+        }
+
+        #login-form:not(:target),
+        #signup-form:not(:target) {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="min-h-screen flex items-center justify-center px-4">
+        <div class="bg-white shadow-lg rounded-lg flex flex-col max-w-xl w-full p-6">
+            <!-- Toggle Links -->
+            <div class="flex justify-center mb-6">
+                <a href="#login-form"
+                    class="w-1/2 text-center text-blue-600 font-semibold py-2 border-b-2 border-blue-600">
+                    Log In
+                </a>
+                <a href="#signup-form"
+                    class="w-1/2 text-center text-green-600 font-semibold py-2 border-b-2 border-green-600 hover:text-blue-600">
+                    Sign Up
+                </a>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login-form">
+                <h2 class="text-2xl font-bold text-gray-700 text-center">Log In</h2>
+                <p class="text-sm text-gray-500 text-center mb-6">Sign in to your account</p>
+                <form action="#" method="POST" class="space-y-4">
+                    <div>
+                        <label for="login-email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="login-email" name="email" placeholder="Your email" required
+                            class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" />
+                    </div>
+                    <div>
+                        <label for="login-password" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" id="login-password" name="password" placeholder="Your password" required
+                            class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" />
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="remember" name="remember"
+                                class="h-4 w-4 text-blue-600 border-gray-300 rounded" />
+                            <label for="remember" class="ml-2 text-sm text-gray-600">Remember me</label>
+                        </div>
+                        <a href="#" class="text-sm text-blue-600 hover:text-blue-800">Forgot password?</a>
+                    </div>
+                    <a href="main.html"
+                        class="block text-center w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow-md transition duration-300">
+                        Log In
+                    </a>
+                </form>
+            </div>
+
+            <!-- Sign-Up Form -->
+            <div id="signup-form">
+                <h2 class="text-2xl font-bold text-gray-700 text-center">Sign Up</h2>
+                <p class="text-sm text-gray-500 text-center mb-6">Create your new account</p>
+                <form action="#" method="POST" class="space-y-4">
+                    <div>
+                        <label for="signup-fullname" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="signup-fullname" name="fullname" placeholder="Your full name" required
+                            class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500" />
+                    </div>
+                    <div>
+                        <label for="signup-email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="signup-email" name="email" placeholder="Your email" required
+                            class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500" />
+                    </div>
+                    <div>
+                        <label for="signup-password" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" id="signup-password" name="password" placeholder="Create a password"
+                            required class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500" />
+                    </div>
+                    <div>
+                        <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm
+                            Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password"
+                            placeholder="Re-enter your password" required
+                            class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500" />
+                    </div>
+                    <a href="main.html"
+                        class="block text-center w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md shadow-md transition duration-300">
+                        Sign Up
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
